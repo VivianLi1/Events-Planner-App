@@ -1,0 +1,182 @@
+html{
+    background-color: #fcea8f;
+}
+
+.NavBar{
+    display: flex;
+    align-items: flex-start;
+    padding-block: 1.5em;
+    padding-inline: 2.5em;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8em;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.Logo > h2{
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #FF0340;
+}
+
+.Logo > i{
+    color: #D92F58;
+}
+
+.Logo--1{
+    margin-right: .3em;
+}
+
+.Logo--2{
+    margin-left: .3em;
+}
+
+.xs{
+    font-size: .3em;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.icon--search{
+    background-color: #D92F58;
+}
+
+.icon--search:hover{
+    color: #ec9eb0;
+    background-color: #7a1b31;
+}
+
+.icon--events{
+    background-color: #FF0202;
+}
+
+.icon--events:hover{
+    color: #fc5757;
+    background-color: #790101;
+}
+
+.icon--about{
+    background-color: #0F83C3;
+}
+
+.icon--about:hover{
+    color: #94d6fa;
+    background-color: #08415f;
+}
+
+.Event{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EventCard{
+    width: 30%;
+    border-radius: 10px;
+
+    background-color: #D92F58;
+}
+
+.EventCard--contentDiv{
+    width: 90%;
+    margin: auto;
+    padding-block: 5%;
+
+    font-family: 'Assistant', sans-serif;
+    color: white;
+}
+
+.EventCard--contentDiv > img{
+    width: 100%;
+    height: auto;
+}
+
+.Event--Title{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.Event--Title > p, .Event--Title > h2{
+    margin: 0;
+}
+
+.Event--Title > h2 > a{
+    color: white; 
+    text-decoration: none;
+}
+
+.Event--Title > h2 > a:hover{
+    color: #F7FF9C;
+    text-decoration: none;
+}
+
+
+.Event--Title > p{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.Event--Info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Event--Date{
+    font-size: 1.1em;
+    color: #F7FF9C;
+}
+
+.Event--Date > p{
+    margin-block: 3px;
+}
+
+.Event--Price{
+    font-size: 1.3em;
+}
+
+.Event--Price > p{
+    margin: 0;
+}
+
+.Event--Price span{
+    color:#65e063;
+    font-weight: 600;
+}
+
+.icon--dislike{    
+    background-color: #DE3434;
+}
+
+.icon--like{
+    background-color: #51C156;
+}
+
+.event--icon{
+    margin: 30px;
+    border: none;
+    font-size: 1.8em;
+    transition: transform .5s ease-in-out;
+}
+
+.event--icon:hover{
+    transform:rotate(360deg);
+} 
