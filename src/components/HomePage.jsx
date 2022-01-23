@@ -7,8 +7,6 @@ import Event from "./Event";
 
 export default function HomePage() {
     
-    const API_KEY = "eD5cjvC29gWQlRWGbsrOF5UNWWOPbgeC";
-
 	const eventContext = useContext(EventContext);
 
 	let fetchedEventsRef = useRef();
@@ -35,7 +33,7 @@ export default function HomePage() {
 			}
 	
 			try{
-				const getEventsPromise = makeGetRequest(`https://app.ticketmaster.com${currUrl}&apikey=${API_KEY}`);
+				const getEventsPromise = makeGetRequest(`https://app.ticketmaster.com${currUrl}&apikey=${process.env.REACT_APP_TM_API_KEY}`);
 				return getEventsPromise;
 			}catch(e){
 				console.log(e);

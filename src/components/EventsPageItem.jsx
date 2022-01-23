@@ -1,9 +1,6 @@
 export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
     const gapi = window.gapi;
 
-	const CLIENT_ID = "587124945315-i35limfh39fgktfn5tq7htkh45s3pglp.apps.googleusercontent.com";
-	const CLIENT_SECRET = "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";
-	const API_KEY = "AIzaSyBFpkwacrA11loWjIihGZSV_K9FT2AurPI";
 	const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",];
 	const SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
@@ -14,9 +11,9 @@ export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
                 console.log("loaded client");
 
                 gapi.client.init({
-                    apiKey: API_KEY,
-                    clientId: CLIENT_ID,
-                    clientSecret: CLIENT_SECRET,
+                    apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+                    clientId: process.env.REACT_APP_CLIENT_ID,
+                    clientSecret: process.env.REACT_APP_CLIENT_SECRET,
                     discoveryDocs: DISCOVERY_DOCS,
                     scope: SCOPES,
                 });
