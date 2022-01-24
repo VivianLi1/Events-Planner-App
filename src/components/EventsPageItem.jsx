@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import EventContext from "../contexts/EventContext";
+
 export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
+
+	const eventContext = useContext(EventContext);
     const gapi = window.gapi;
 
 	const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",];
 	const SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
-	const handleClick = () => {
+	const addToCalendar = () => {
 
         if(!loggedIn){
             gapi.load("client:auth2", () => {
@@ -67,10 +72,16 @@ export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
 	}
 
 	return (
-		<div>
-			{eventObj.name}
-			<button><i className="fas fa-times"></i></button>
-			<button onClick={handleClick}><i className="fas fa-calendar-plus"></i></button>
+		<div className="EventPageItem">
+			<div className="EventPageItem--Info">
+				<h2><a href={eventObj.url} rel="noreferrer" target="_blank">{eventObj.name}</a></h2>
+				<div className="EventPageItem--DateTime">
+					<p className="EventPageItem--Date">{eventObj.startDates.localDate}</p>
+					<p>{eventObj.startDates.localTime}</p>
+				</div>
+			</div>
+			<button className="icon icon--remove event--icon" onClick={() => eventContext.dispatch({type: "remove", payload: eventObj.id})}><i className="fas fa-times"></i></button>
+			<button className="icon icon--calendar event--icon" onClick={addToCalendar}><i className="fas fa-calendar-plus"></i></button>
 		</div>
 	);
 }

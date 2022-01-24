@@ -48,6 +48,7 @@ html{
 
     color: white;
     text-decoration: none;
+    cursor: pointer;
 
     margin: 5px;
     width: 60px;
@@ -102,6 +103,7 @@ html{
     padding-block: 5%;
 
     font-family: 'Assistant', sans-serif;
+    font-weight: 600;
     color: white;
 }
 
@@ -164,19 +166,82 @@ html{
 
 .icon--dislike{    
     background-color: #DE3434;
+    transition: transform .5s ease-in-out;
 }
 
 .icon--like{
     background-color: #51C156;
+    transition: transform .5s ease-in-out;
 }
 
 .event--icon{
     margin: 30px;
     border: none;
     font-size: 1.8em;
-    transition: transform .5s ease-in-out;
 }
 
-.event--icon:hover{
+.icon--dislike:hover, .icon--like:hover{
     transform:rotate(360deg);
-} 
+}
+
+.NoEvents{
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800;
+    color: #D92F58;
+}
+
+.EventPageItem{
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 50em;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    
+    background-color: #D92F58;
+}
+
+.EventPageItem > button{
+    margin: 10px;
+}
+
+.EventPageItem--Info{
+    margin-right: auto;
+}
+
+.EventPageItem--Info > h2{
+    margin-block: 0;
+}
+
+.EventPageItem--Info > h2 > a{
+    text-decoration: none;
+    color: white;
+}
+
+.EventPageItem--DateTime, .EventPageItem--Info > h2 > a:hover{
+    color: #F7FF9C;
+}
+
+.EventPageItem--DateTime{
+    display: flex;
+}
+
+.EventPageItem--Date{
+    margin-right: 20px;
+}
+
+.icon--remove{
+    background-color: white;
+    color: #DE3434;
+}
+
+.icon--calendar{
+    background-color: white;
+    color: #51C156;
+}
