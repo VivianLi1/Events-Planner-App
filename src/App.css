@@ -9,7 +9,7 @@ h1, h2, h3, p{
 .NavBar{
     display: flex;
     align-items: flex-start;
-    padding-block: 1.5em;
+    padding-block: 1.2em;
     padding-inline: 2.5em;
 
     font-family: 'Outfit', sans-serif;
@@ -96,7 +96,7 @@ h1, h2, h3, p{
 }
 
 .Event--Category{
-    margin: 20px;
+    margin: 15px;
     font-family: 'Assistant', sans-serif;
 }
 
