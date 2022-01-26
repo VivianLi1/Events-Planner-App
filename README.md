@@ -13,6 +13,10 @@ This app was designed for those who are overburdened by the multitude of events 
 - Add events to your Google Calendar 
 
 ## Screenshots
+home page
+![ss1](./screenshots/ss1.png)
+events page
+![ss2](./screenshots/ss2.png)
 
 ## Built with
 - [TicketMaster Discovery API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
@@ -23,7 +27,7 @@ This app was designed for those who are overburdened by the multitude of events 
 - User sign in/sign up
   - save user event list to a database
 - More responsiveness/animations
-- About Page
+- Better mobile integration 
 
 ## Author
 Github: [@VivianLi1](https://github.com/VivianLi1)
