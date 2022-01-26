@@ -20,6 +20,10 @@ export function EventContextProvider(props){
     const [events, dispatch] = useReducer(reducer, []);
 
     const getNewEvent = (newEvent) =>{
+        if(!newEvent.dates.start.hasOwnProperty('dateTime')){
+            return false;
+        }
+
         const event = {
             id: newEvent.id,
             name: newEvent.name,
@@ -38,12 +42,13 @@ export function EventContextProvider(props){
             //.currency, .min, .max
             priceRange: newEvent.hasOwnProperty('priceRanges') ? newEvent.priceRanges[0] : "",
             //.name, .timezone, .city, .state, .address, .location
-            venue: newEvent._embedded.venues[0]
+            venue: newEvent.hasOwnProperty('_embedded') ? newEvent._embedded.venues[0]: ""
         };
         return event;
     }
 
     const get12HrTime = (time) =>{
+        console.log(time)
         let newTime = time.slice(0, 5);
         if(Number(newTime.slice(0, 2)) > 12){
             newTime = (Number(newTime.slice(0, 2)) - 12) + newTime.slice(2);

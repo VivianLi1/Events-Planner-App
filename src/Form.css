@@ -1,0 +1,55 @@
+.form{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+
+    font-family: 'Assistant', 'sans-serif';
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.form > form{
+    width: 100%;
+}
+
+#query{
+    width: 99%;
+}
+
+.city{
+    margin-right: auto;
+}
+
+.form--row2{
+    display: flex;
+    margin-top: 10px;
+}
+
+.start{
+    margin-right: 10px;
+}
+
+input{
+    border-radius: 7px;
+    border: 1px solid black
+}
+
+.searchButton{
+    float: right;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+
+    color: white;
+    background-color: #D92F58;
+
+    cursor: pointer;
+}
+
+.searchButton:hover{
+    background-color: #83112c;
+}

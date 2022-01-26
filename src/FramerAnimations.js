@@ -10,5 +10,9 @@ const pageVariants = {
 	},
 };
 
+const pageTransition = {
+	duration: 1
+}
 
-export {pageVariants};
+
+export {pageVariants, pageTransition}

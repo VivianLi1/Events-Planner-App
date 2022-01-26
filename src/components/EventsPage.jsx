@@ -1,12 +1,9 @@
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
-import {pageVariants} from '../FramerAnimations';
-
+import {pageVariants, pageTransition} from '../FramerAnimations';
 
 import EventContext from "../contexts/EventContext";
 import EventsPageItem from "./EventsPageItem";
-
-
 
 export default function EventsPage() {
 	const eventContext = useContext(EventContext);
@@ -19,6 +16,7 @@ export default function EventsPage() {
             animate="in"
             exit="out"
             variants={pageVariants}
+            transition={pageTransition}
         >
             {eventContext.events.length === 0 ? 
                 <h2 className="NoEvents">no events yet :(</h2> :
