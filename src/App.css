@@ -126,6 +126,7 @@ h1, h2, h3, p{
     border-radius: 10px;
 
     background-color: #D92F58;
+    box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.185);
 }
 
 .EventCard--contentDiv{
@@ -237,6 +238,7 @@ h1, h2, h3, p{
     font-weight: 600;
     
     background-color: #D92F58;
+    box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.185);
 }
 
 .EventPageItem > button{
