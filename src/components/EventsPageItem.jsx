@@ -10,7 +10,7 @@ export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
 	const SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
 	const addToCalendar = () => {
-
+		// makes user log in to Google Sign In if not signed in
         if(!loggedIn){
             gapi.load("client:auth2", () => {
                 console.log("loaded client");
@@ -38,7 +38,9 @@ export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
 		}
 	};
 
+	
 	const createGCalEvent = (eventObj) => {
+		//create Google Calendar event
 		const event = {
 			'summary': eventObj.name,
 			'location': `${eventObj.venue.name} - ${eventObj.venue.city.name}, ${eventObj.venue.state.stateCode}`,
@@ -58,12 +60,14 @@ export default function EventsPageItem({eventObj, loggedIn, setLoggedIn}) {
 			resource: event,
 		});
 
+		//adds events to user's Google Calendar
 		request.execute((event) => {
 			window.open(event.htmlLink);
 		});
 		
 	};
 
+	//if no end date, set end date start date plus 1 day
 	const getNextDay = (startDateTime) => {
 		let date = new Date(startDateTime);
 		console.log(date);

@@ -6,8 +6,10 @@ export function EventContextProvider(props){
 
     const reducer = (prevEvents, action) =>{
         switch (action.type){
+            //add event to events state
             case 'add':
                 return [...prevEvents, action.payload];
+            //remove event from events state
             case 'remove':
                 return prevEvents.filter(event => {
                     return event.id !== action.payload;
@@ -17,13 +19,16 @@ export function EventContextProvider(props){
         }
     }
 
+    //users saved events
     const [events, dispatch] = useReducer(reducer, []);
 
     const getNewEvent = (newEvent) =>{
+        // if no start time, don't add to fetched events list
         if(!newEvent.dates.start.hasOwnProperty('dateTime')){
             return false;
         }
 
+        // parse ticketmaster data to event object
         const event = {
             id: newEvent.id,
             name: newEvent.name,
@@ -47,6 +52,7 @@ export function EventContextProvider(props){
         return event;
     }
 
+    //parse datetime to 12 hour time
     const get12HrTime = (time) =>{
         console.log(time)
         let newTime = time.slice(0, 5);

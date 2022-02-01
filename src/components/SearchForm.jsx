@@ -21,7 +21,6 @@ export default function SearchForm({handleSearch}){
 
     const handleSumbit = (event) =>{
         event.preventDefault()
-        //console.log(formData)
         handleSearch(formData);
     }
 
