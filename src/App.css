@@ -123,6 +123,7 @@ h1, h2, h3, p{
 
 .EventCard{
     max-width: 30em;
+    min-width: 30em;
     border-radius: 10px;
 
     background-color: #D92F58;
