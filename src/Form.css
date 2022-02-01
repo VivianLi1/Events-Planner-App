@@ -25,6 +25,7 @@
 .form--row2{
     display: flex;
     margin-top: 10px;
+    width: 99%;
 }
 
 .start{
@@ -52,4 +53,10 @@ input{
 
 .searchButton:hover{
     background-color: #83112c;
+}
+
+@media only screen and (max-width: 1500px) {
+    .form--row2{
+        display: block;
+    }
 }

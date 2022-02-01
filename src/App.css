@@ -122,7 +122,7 @@ h1, h2, h3, p{
 }
 
 .EventCard{
-    width: 30%;
+    max-width: 30em;
     border-radius: 10px;
 
     background-color: #D92F58;
@@ -210,6 +210,8 @@ h1, h2, h3, p{
     margin: 30px;
     border: none;
     font-size: 1.8em;
+    min-height: 60px;
+    min-width: 60px;
 }
 
 .icon--dislike:hover, .icon--like:hover{
@@ -228,7 +230,7 @@ h1, h2, h3, p{
     margin: auto;
     margin-bottom: 30px;
     padding: 20px;
-    width: 50em;
+    max-width: 50em;
     border-radius: 10px;
 
     display: flex;
@@ -240,6 +242,7 @@ h1, h2, h3, p{
     background-color: #D92F58;
     box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.185);
 }
+
 
 .EventPageItem > button{
     margin: 10px;
